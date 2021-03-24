@@ -21,6 +21,7 @@ extern "C" {
 
 	pairing_t *pairing_new();
 	void pairing_free(pairing_t *pairing);
+	void printPairings(void);
 
 
 
@@ -28,5 +29,7 @@ extern "C" {
 #ifdef __cplusplus
 } //Extern C
 #endif
+
+
 #endif
 #endif // __PAIRING_H__

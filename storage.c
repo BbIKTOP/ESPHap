@@ -449,11 +449,7 @@ int homekit_storage_remove_pairing(const char *device_id) {
 void homekit_storage_pairing_free(pairing_t * pairing) {
 	if (!pairing)
 		return;
-	if (pairing->device_id)
-		free(pairing->device_id);
-	if (pairing->device_key)
-		crypto_ed25519_free(pairing->device_key);
-	free(pairing);
+	pairing_free(pairing);
 }
 
 pairing_t *homekit_storage_find_pairing(const char *device_id) {
